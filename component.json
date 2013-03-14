@@ -1,0 +1,18 @@
+{
+  "name": "common",
+  "description": "Common site functionality. Create tips, dialogs, validation and more using data attributes and classes.",
+  "version": "0.0.1",
+  "scripts": [
+    "index.js"
+  ],
+  "dependencies": {
+    "nib-components/accordion": "0.0.4",
+    "nib-components/tip": "0.0.2",
+    "nib-components/affix": "0.0.1",
+    "nib-components/scroll-spy": "0.0.1",
+    "nib-components/callback-dialog": "0.0.1",
+    "anthonyshort/waypoints": "0.0.12",
+    "nib-components/dialog": "0.0.3",
+    "nib-components/form-validator": "0.0.3"
+  }
+}
