@@ -96,7 +96,7 @@ Accordion.create('.js-accordion', {
 /**
  * Book a callback dialog
  */
-createCallbackDialog();
+require('callback-dialog')();
 
 /**
  * Set data attribute on the body for the current breakpoint
