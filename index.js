@@ -13,6 +13,10 @@ var ga                = require('analytics');
 var body = $('body');
 var root = $('html');
 
+var mediaQuery = function(query) {
+  return window.matchMedia && window.matchMedia(query).matches;
+};
+
 /**
  * Allows enabling of debugging mode
  */
@@ -30,7 +34,7 @@ root.removeClass('no-js').addClass('js');
  * This is targetting using a mixin in Sass
  */
 
-if( window.matchMedia && window.matchMedia('(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)').matches) {
+if( mediaQuery('(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)') ) {
   root.addClass('retina');
 }
 else {
@@ -38,17 +42,17 @@ else {
 }
 
 // For IE8, this will let us translate something back 50% left/up
-// This is used to horizontally or vertically center things. When 
+// This is used to horizontally or vertically center things. When
 // IE8 is dead we can remove this
 if(Modernizr.csstransforms === false) {
   body.find('.js-translate-left').each(function(){
     var el = $(this);
     el.css('margin-left', el.outerWidth() * -0.5);
-  }); 
+  });
   body.find('.js-translate-up').each(function(){
     var el = $(this);
     el.css('margin-top', el.height() * -0.5);
-  });    
+  });
 }
 
 /**
@@ -68,14 +72,14 @@ body.on('click', '[data-track-event]', function(el){
  */
 var menu = document.querySelector('.js-mobile-menu');
 if(menu) {
-  OffCanvas.create({ el: menu });  
+  OffCanvas.create({ el: menu });
 }
 
 /**
  * Create tooltips
  */
-Tip.create({ 
-  context: body 
+Tip.create({
+  context: body
 });
 
 /**
@@ -116,7 +120,7 @@ Affix.create('[data-affix]');
  */
 
 ScrollSpy.create('[data-scroll-spy]', {
-  offsetAttribute: window.matchMedia('(min-width: 640px)').matches ? 'data-offset' : null
+  offsetAttribute: mediaQuery('(min-width: 640px)') ? 'data-offset' : null
 });
 
 /**
@@ -131,13 +135,13 @@ var waypoints = Waypoints.create({
 
 waypoints.on('point', function(point){
   ga.trackEvent({
-    category: 'Animation',    
+    category: 'Animation',
     action: 'Scroll',
     value: point
   });
 });
 
-if(window.matchMedia('(max-width: 640px)').matches) {
+if( mediaQuery('(max-width: 640px)') ) {
   waypoints.each(function(point){
     waypoints.fire(point).remove(point);
   });
