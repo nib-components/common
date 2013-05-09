@@ -115,7 +115,9 @@ Affix.create('[data-affix]');
  * Scroll Spy
  */
 
-ScrollSpy.create('[data-scroll-spy]');
+ScrollSpy.create('[data-scroll-spy]', {
+  offsetAttribute: window.matchMedia('(min-width: 640px)').matches ? 'data-offset' : null
+});
 
 /**
  * Create waypoints using .js-waypoint classes
@@ -129,11 +131,17 @@ var waypoints = Waypoints.create({
 
 waypoints.on('point', function(point){
   ga.trackEvent({
-    category: 'Animation',
+    category: 'Animation',    
     action: 'Scroll',
     value: point
   });
 });
+
+if(window.matchMedia('(max-width: 640px)').matches) {
+  waypoints.each(function(point){
+    waypoints.fire(point).remove(point);
+  });
+}
 
 /**
  * Create banner slideshows
