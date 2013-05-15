@@ -1,7 +1,7 @@
 {
   "name": "common",
   "description": "Common site functionality",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "scripts": [
     "index.js"
   ],
