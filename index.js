@@ -120,7 +120,7 @@ Affix.create('[data-affix]');
  */
 
 ScrollSpy.create('[data-scroll-spy]', {
-  offsetAttribute: mediaQuery('(min-width: 640px)') ? 'data-offset' : null
+  offsetAttribute: mediaQuery('("min-width: 640px")') ? 'data-offset' : null
 });
 
 /**
