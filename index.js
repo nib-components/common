@@ -71,7 +71,7 @@ body.on('click', '[data-track-event]', function(el){
  * Create off-canvas menu
  */
 var menu = document.querySelector('.js-mobile-menu');
-if(menu) {
+if(menu && window.matchMedia) {
   OffCanvas.create({ el: menu });
 }
 
