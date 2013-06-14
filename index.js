@@ -177,3 +177,8 @@ body.on('click', '.js-local-scroll', function(event){
   var offset = this.getAttribute('data-offset') * 1 || 0;
   $('html, body').stop().animate({ scrollTop: target.offset().top - body.offset().top + offset }, { duration: 2000, easing: 'easeOutExpo'});
 });
+
+/**
+ * Responsive media
+ */
+require('breakpoint-media').create();
