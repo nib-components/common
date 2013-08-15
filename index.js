@@ -137,6 +137,7 @@ waypoints.on('point', function(point){
   ga.trackEvent({
     category: 'Animation',
     action: 'Scroll',
+    label: 'Waypoint',
     value: Math.round(point)
   });
 });
