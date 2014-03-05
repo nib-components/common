@@ -19,6 +19,6 @@
     "nib-components/body-attributes": "0.1.0",
     "nib-components/off-canvas": "0.1.7",
     "nib-components/analytics": "0.0.2",
-    "nib-components/banner-slideshow": "0.1.1"
+    "nib-components/banner-slideshow": "ie8rewrite"
   }
 }
