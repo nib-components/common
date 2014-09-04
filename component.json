@@ -18,7 +18,7 @@
     "nib-components/breakpoints-media": "0.2.3",
     "nib-components/body-attributes": "0.1.0",
     "nib-components/off-canvas": "0.1.7",
-    "nib-components/analytics": "0.1.0",
+    "nib-components/analytics": "0.2.1",
     "nib-components/banner-slideshow": "ie8rewrite"
   }
 }
