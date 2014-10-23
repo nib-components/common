@@ -9,7 +9,7 @@
     "anthonyshort/waypoints": "0.0.13",
     "visionmedia/debug": "*",
     "nib-components/callback-dialog": "0.1.4",
-    "nib-components/accordion": "0.0.7",
+    "nib-components/accordion": "0.0.9",
     "nib-components/tip": "0.0.2",
     "nib-components/affix": "0.0.1",
     "nib-components/scroll-spy": "0.3.5",
